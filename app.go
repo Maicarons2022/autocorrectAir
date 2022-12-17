@@ -23,9 +23,9 @@ func (a *App) startup(ctx context.Context) {
 
 // Greet returns a greeting for the given name
 func (a *App) Greet(name string) string {
-	return ""
+	return "Greet"
 }
 
 func (a *App) Test() string {
-	return "时间" + time.Now().String()
+	return "时间：" + time.Now().Format("2006-01-02 15:04:05")
 }

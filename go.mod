@@ -1,4 +1,4 @@
-module temp
+module autocorrectair
 
 go 1.18
 

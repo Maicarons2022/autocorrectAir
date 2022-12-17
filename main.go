@@ -16,11 +16,11 @@ func main() {
 
 	// Create application with options
 	err := wails.Run(&options.App{
-		Title:            "temp",
+		Title:            "AutocorrectAir",
 		Width:            1024,
 		Height:           768,
 		Assets:           assets,
-		BackgroundColour: &options.RGBA{R: 180, G: 220, B: 194, A: 255},
+		//BackgroundColour: &options.RGBA{R: 180, G: 220, B: 194, A: 255},
 		OnStartup:        app.startup,
 		Bind: []interface{}{
 			app,
