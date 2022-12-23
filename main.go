@@ -22,6 +22,7 @@ func main() {
 		Assets:           assets,
 		//BackgroundColour: &options.RGBA{R: 180, G: 220, B: 194, A: 255},
 		OnStartup:        app.startup,
+		OnShutdown: 		app.shutdown,
 		Bind: []interface{}{
 			app,
 		},

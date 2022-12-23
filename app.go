@@ -21,6 +21,11 @@ func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
+func (a *App) shutdown(ctx context.Context) {
+	
+	a.ctx = ctx
+}
+
 // Greet returns a greeting for the given name
 func (a *App) Greet(name string) string {
 	return "Greet"
