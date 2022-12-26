@@ -2,6 +2,7 @@ package main
 
 import (
 	"embed"
+	"github.com/wailsapp/wails/v2/pkg/options/windows"
 
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
@@ -16,13 +17,19 @@ func main() {
 
 	// Create application with options
 	err := wails.Run(&options.App{
-		Title:            "AutocorrectAir",
-		Width:            1024,
-		Height:           768,
-		Assets:           assets,
-		//BackgroundColour: &options.RGBA{R: 180, G: 220, B: 194, A: 255},
-		OnStartup:        app.startup,
-		OnShutdown: 		app.shutdown,
+		Windows: &windows.Options{
+			WebviewIsTransparent: false,
+			DisableWindowIcon:    false,
+			OnSuspend:            nil,
+			OnResume:             nil,
+		},
+
+		Title:      "AutocorrectAir",
+		Width:      1024,
+		Height:     768,
+		Assets:     assets,
+		OnStartup:  app.startup,
+		OnShutdown: app.shutdown,
 		Bind: []interface{}{
 			app,
 		},
