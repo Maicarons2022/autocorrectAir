@@ -35,17 +35,17 @@ jobs:
     - name: webview2
       run: choco install webview2-runtime
       
-    - name: garble
-      run: go install mvdan.cc/garble@latest   
+    #- name: garble
+    #  run: go install mvdan.cc/garble@latest   
       
-    - name: nsis
-      run: choco install nsis 
+    #- name: nsis
+    # run: choco install nsis 
       
-    - name: upx
-      run: choco install upx  
+    #- name: upx
+    #  run: choco install upx  
       
     - name: build
-      run: wails build -obfuscated -upx -webview2 embed -u -debug -nsis
+      run: wails build -webview2 embed -u -debug
       
     - uses: actions/upload-artifact@v3
       with:
