@@ -32,13 +32,10 @@ jobs:
     - name: get wails
       run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
     
-    - name: download webview2
-      run: wget https://go.microsoft.com/fwlink/p/?LinkId=2124703
-
-    - name: install webview2
-      run: MicrosoftEdgeWebView2RuntimeInstaller{X64/X86/ARM64}.exe /silent /install
+    - name: webview2
+      run: choco install webview2-runtime
       
-    - name: install garble
+    - name: garble
       run: go install mvdan.cc/garble@latest   
       
     - name: nsis
