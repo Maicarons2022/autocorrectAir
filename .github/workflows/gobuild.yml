@@ -1,0 +1,61 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: GoBuild
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/cache@v3
+      with:
+        path: |
+          ~\AppData\Local\go-build
+          ~\go\pkg\mod
+        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-go-
+          
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.19
+
+    - name: get wails
+      run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
+    
+    - name: download webview2
+      run: wget https://go.microsoft.com/fwlink/p/?LinkId=2124703
+
+    - name: install webview2
+      run: MicrosoftEdgeWebView2RuntimeInstaller{X64/X86/ARM64}.exe /silent /install
+      
+    - name: install garble
+      run: go install mvdan.cc/garble@latest   
+      
+    - name: nsis
+      run: choco install nsis 
+      
+    - name: upx
+      run: choco install upx  
+      
+    - name: build
+      run: wails build -obfuscated -upx -webview2 embed -u -debug -nsis
+      
+    - uses: actions/upload-artifact@v3
+      with:
+        name: debug-windows
+        path: build/bin/
+      
+      
+      
+      
+      
