@@ -2,4 +2,4 @@
 
 Autocorrect Air
 
-给 Autocorrect 做一个漂亮的界面。
+采用 React+Go+Wails专门为Autocorrect设计的现代桌面程序,开源.
