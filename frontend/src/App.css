@@ -3,7 +3,7 @@
     --PrimaryColorLight: #47aeff; /* Lighter version of --PrimaryColor for DarkMode */
 }
 body {
-    font-family: "AlibabaPuHuiTi", system-ui;
+    font-family:  system-ui,"AlibabaPuHuiTi";
 }
 ::selection {
     color: #ffffff;

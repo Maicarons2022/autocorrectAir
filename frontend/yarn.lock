@@ -582,10 +582,10 @@
   dependencies:
     "history" "^5.2.0"
 
-"react-windows-ui@^4.2.0":
-  "integrity" "sha512-7GAXiEU0hGIiWsXfo8THG6r+QupkyZAjhVp2cyIZP6VAW+rMusxRnCyXMinBjJaG7/+/h06uUQSWx4XbRwyfqg=="
-  "resolved" "https://registry.npmmirror.com/react-windows-ui/-/react-windows-ui-4.2.0.tgz"
-  "version" "4.2.0"
+"react-windows-ui@^4.2.1":
+  "integrity" "sha512-ZRQYGffEmnid4m83Q3R2X4dRkYxwac5rcegux+RhRb81gJRYufoVArxT4zzwpq0iHX/yieaJ+dFXXx02H4m/Sw=="
+  "resolved" "https://registry.npmmirror.com/react-windows-ui/-/react-windows-ui-4.2.1.tgz"
+  "version" "4.2.1"
 
 "react@^18.0.0", "react@^18.2.0", "react@>=16.8":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="

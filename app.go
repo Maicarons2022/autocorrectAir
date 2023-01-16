@@ -22,7 +22,6 @@ func (a *App) startup(ctx context.Context) {
 }
 
 func (a *App) shutdown(ctx context.Context) {
-	
 	a.ctx = ctx
 }
 
@@ -31,6 +30,6 @@ func (a *App) Greet(name string) string {
 	return "Greet"
 }
 
-func (a *App) Test() string {
+func (a *App) TestTime() string {
 	return "时间：" + time.Now().Format("2006-01-02 15:04:05")
 }

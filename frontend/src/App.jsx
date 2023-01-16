@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Mainpage from './pages/index';
-import {SplashScreen,AppTheme, NavBar, NavBarLink, NavSearchSuggestion, NavThemeSwitcher} from "react-windows-ui";
+import {AppTheme, NavBar, NavBarLink, NavBarSearchSuggestion, NavBarThemeSwitch,SplashScreen} from "react-windows-ui";
 import Aboutpage from "./pages/about";
 import Textareapage from "./pages/textarea";
 
@@ -48,7 +48,7 @@ const App = () => {
                         </div>}
                 >
                     {/* Optional component - emphasizes navbar Search funtionality */}
-                    <NavSearchSuggestion
+                    <NavBarSearchSuggestion
                         placeholder="搜索..."
                         tooltip="Search Tooltip"
                         data={[
@@ -57,7 +57,7 @@ const App = () => {
                             {label: 'textarea', link: '/text', icon: <i className="icons10-home"></i>}
                         ]}
                     />
-                    <NavThemeSwitcher/>
+                    <NavBarThemeSwitch/>
 
                     <h1>Pages</h1>
                     <div className="app-hr"></div>
