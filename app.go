@@ -30,6 +30,6 @@ func (a *App) Greet(name string) string {
 	return "Greet"
 }
 
-func (a *App) TestTime() string {
+func (a *App) Test() string {
 	return "时间：" + time.Now().Format("2006-01-02 15:04:05")
 }

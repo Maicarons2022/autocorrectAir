@@ -8,7 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "clipboard": "^2.0.11",
     "react": "^18.0.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
     "react-windows-ui": "^4.2.1"

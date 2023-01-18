@@ -1,9 +1,9 @@
 :root {
-    --PrimaryColor: #0078D7; /* Change of your choice */
+    --PrimaryColor: #0056d7; /* Change of your choice */
     --PrimaryColorLight: #47aeff; /* Lighter version of --PrimaryColor for DarkMode */
 }
 body {
-    font-family:  system-ui,"AlibabaPuHuiTi";
+    font-family: "HarmonyOS",system-ui;
 }
 ::selection {
     color: #ffffff;
