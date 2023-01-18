@@ -1,6 +1,6 @@
 import {Button, NavPageContainer, TextArea} from "react-windows-ui";
 import {useState} from "react";
-
+import  "../../wailsjs/runtime";
 const Textareapage = (pop) => {
     const [resultText, setResultText] = useState("text");
     const updateResultText = (result) => setResultText(result);
@@ -20,12 +20,19 @@ const Textareapage = (pop) => {
                 onChange={()=>{updateResultText(document.getElementById("t1").value)}}>
             </textarea>
             <div style={{
-                alignItems:"center",
-                flex:"auto",
-                right:"auto"
+                margin: "auto",
             }}
             >
-                <Button icon={<i></i>} value={"格式化"} type={"primary"} onClick={()=>{}}/>
+                <Button icon={<i className="icons10-home"></i>} value={"格式化"} type={"primary"} onClick={()=>{}}/>
+                <Button icon={<i className="icons10-home"></i>} value={"粘贴自剪切板"} type={"primary-outline"} onClick={()=>{
+
+                }}/>
+                <Button icon={<i className="icons10-home"></i>} value={"复制到剪切板"} type={"primary-outline"} onClick={()=>{
+                }}/>
+                <Button icon={<i className="icons10-home"></i>} value={"清除"} type={"primary-outline"} onClick={()=>{
+                    document.getElementById("t1").value="";
+                    document.getElementById("t2").value="";
+                }}/>
             </div>
             <div >
                 <textarea disabled={true} value={resultText}  style={{

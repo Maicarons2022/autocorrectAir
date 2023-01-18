@@ -1,11 +1,19 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Mainpage from './pages/index';
-import {AppTheme, NavBar, NavBarLink, NavBarSearchSuggestion, NavBarThemeSwitch,SplashScreen} from "react-windows-ui";
+
+import {
+    AppTheme,
+    NavBar,
+    NavBarLink,
+    NavBarSearchSuggestion,
+    NavBarSubMenu,
+    NavBarThemeSwitch,
+    SplashScreen
+} from "react-windows-ui";
 import Aboutpage from "./pages/about";
 import Textareapage from "./pages/textarea";
-
+import Mainpage from './pages/index';
 
 const App = () => {
 
@@ -44,13 +52,13 @@ const App = () => {
                     titleBarMobile={
                         <div style={{display: "flex", justifyContent: "space-between", width: "calc(100% - 60px)"}}>
                             <span className="app-navbar-name">AutocorrectAir</span>
-                            <span className="app-navbar-name">中文格式化</span>
+                            <span className="app-navbar-name">你把窗口调的有点小了</span>
                         </div>}
                 >
                     {/* Optional component - emphasizes navbar Search funtionality */}
                     <NavBarSearchSuggestion
                         placeholder="搜索..."
-                        tooltip="Search Tooltip"
+                        tooltip="Search"
                         data={[
                             {label: 'home', link: '/', icon: <i className="icons10-home"></i>},
                             {label: 'about', link: '/about', icon: <i className="icons10-home"></i>},
@@ -59,16 +67,14 @@ const App = () => {
                     />
                     <NavBarThemeSwitch/>
 
-                    <h1>Pages</h1>
+                    <h1>开始创作!</h1>
                     <div className="app-hr"></div>
-
                     <NavBarLink
                         to="/"
                         exact={true}
                         text="主页"
                         icon={<i className="icons10-home"></i>}
                     />
-
                     {/*<NavBarLink
                         to="/page1"
                         text="Page1"
@@ -85,6 +91,25 @@ const App = () => {
                         text="文本处理"
                         icon={<i className="icons10-columns"></i>}
                     />
+                    <NavBarSubMenu
+                    title={"设置"}>
+                        <NavBarLink
+                            to="/"
+                            text="Autocorrect 设置"
+                            icon={<i className="icons10-columns"></i>}
+                        />
+                        <NavBarLink
+                            to="/"
+                            text="主题设置"
+                            icon={<i className="icons10-columns"></i>}
+                        />
+                        <NavBarLink
+                            to="/"
+                            text="软件设置"
+                            icon={<i className="icons10-columns"></i>}
+                        />
+
+                    </NavBarSubMenu>
                     <NavBarLink
                         to="/about"
                         text="关于"
